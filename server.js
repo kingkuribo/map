@@ -6,7 +6,7 @@ const server = http.createServer(app);
 app.use(express.json()); // 📌 これがないと req.body は undefined になる
 
 // ポート番号の設定
-const PORT = 3000;
+const PORT = 10000;
 
 // 静的ファイルを提供
 app.use(express.static("public"));
