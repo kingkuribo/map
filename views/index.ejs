@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/css/style.css"> <!-- CSSをリンク -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Map</title>
+</head>
+
+<body>
+  <h1>Google Maps APIを使った地図表示</h1>
+  <div id="map"></div>
+
+  <script>
+    function loadGoogleMaps() {
+      const script = document.createElement("script");
+      script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAKqmzlo5LhbnszccVdaA__acTRkPp2wzg&callback=addJS&loading=async";
+      script.async = true;
+      document.head.appendChild(script);
+    }
+
+    function addJS() {
+      const script = document.createElement("script");
+      script.src = "client.js";
+      document.head.appendChild(script);
+    }
+
+    window.onload = loadGoogleMaps;
+  </script>
+</body>
+
+</html>
